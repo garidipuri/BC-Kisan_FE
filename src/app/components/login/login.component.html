@@ -1,0 +1,47 @@
+
+
+<body>
+    <div class="login-div">
+        
+     <div class="row" style="align-items: center; margin: auto;text-align: center;">
+                <img src="assets/logo2.png" alt="Test Image"  width="110" height="60px"/>
+            <div>
+                <h2>Sign in</h2>
+                <h4>Use your Kisan Account</h4>
+            </div>
+  
+     <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" > -->
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="outline" style="width: 100%;" >
+            <mat-label style="color: #07B558;">Email or Phone</mat-label>
+            <input  matInput placeholder="Email or Phone" formControlName="email" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label style="color: #07B558;">Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password">
+            </mat-form-field>
+          <div href="#" style="color: #07B558;"><a routerLink="/ForgotPassword" style="color: #07B558;">Forgot email?</a></div>
+          <br>
+          <!-- <div class="row">
+              <div class="col s12">Not your computer? Use Guest mode to signin privately. <br> <div style="color: #07B558;" href="#">Learn more</div>
+            </div>
+          </div> -->
+          <br>
+        <div class="row" style="display: inline;">
+            <div style="color: #07B558;" href="#" > <a routerLink="/signup" style="color: #07B558;">Create account</a><button type="submit" [disabled]="!profileForm.valid" style="float: right;" mat-raised-button color="success" >Login</button></div>
+            <!-- <div >  </div> -->
+        </div>
+        
+        
+    </form>
+    
+    </div>
+     
+    
+    
+</body>
+
